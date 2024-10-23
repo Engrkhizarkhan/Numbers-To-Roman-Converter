@@ -18,7 +18,7 @@ function convertToRoman(value) {
         "IV": 4,
         "I": 1
     };
-    result = '';
+    let result = '';
     for (let key in romanNumeral) {
         while (value >= romanNumeral[key]) {
             result += key;
@@ -30,7 +30,7 @@ function convertToRoman(value) {
 
 
 convertBtn.addEventListener('click', () => {
-    const value = input.value;
+    const value = parseInt(input.value);
     if(value === '') {
         output.innerHTML = "Please enter a valid number";
         return;
